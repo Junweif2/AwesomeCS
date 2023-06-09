@@ -5,7 +5,7 @@
 - Tags must be explicitly closed, e.g. `<img />`, `<li></li>`
 - camelCase HTML and SVG attributes. e.g. `className="xxx"`
 - `{}` can directly using the javascript variable in it, and any JavaScript expression and self wroted function
-- For JS objects or inline CSS style, using double curlies `{{}}`  to distingush
+- For JS objects or inline CSS style, using double curlies `{{}}`  to distinguish
 - Converter Tools: https://transform.tools/html-to-jsx
 
 # General
@@ -18,4 +18,5 @@
 - `Component` start with capital letter, `someFunction` function use lower camel case
 - `onSomething` names the events, `handleSomething` names the function handle the events
 	- `onClick`: `<button>`'s built-in attribute
+- \`xxx ${Variable} xxx \` equals to `'xxx'+Variable+'xxx'`
 
