@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "83ae54e53b2fba7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Javascript/README.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "5beeca3b8fb760c9",
             "type": "leaf",
             "state": {
@@ -38,6 +50,18 @@
               "type": "markdown",
               "state": {
                 "file": "Javascript/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d2d81a451b010cbc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React/Libraries.md",
                 "mode": "source",
                 "source": false
               }
@@ -174,10 +198,11 @@
   },
   "active": "19af5fba33691ea7",
   "lastOpenFiles": [
+    "Javascript/README.md",
     "React/Syntax.md",
+    "React/Libraries.md",
     "React/Component.md",
     "React/README.md",
-    "Javascript/README.md",
     "Git/README.md",
     "README.md",
     "Javascript",

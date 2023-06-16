@@ -65,9 +65,23 @@
 	- Parents can declare a shared state and pass to child components, make child component communicate and sync with each other.
 	- State is private to the component, can't directly update state of parent component in child component.
 	- Typically, pass down a function from parent to child component through prop, but the function can't pass the function with parameter, because directly pass the function will call the function to render the component, leading to infinity render. *Need to constrcut a medium function to call the function with parameters needed, like a warpped function*, simple way is to use arrow function `() => xxxXxx(xxx)`
-- Object's state
+- Object's state: although Object is mutable, treat it as read-only in react. Because mutation doesn't trigger re-render
 	- create a new object and pass it to the state setting function。 e.g. `setPosition({ x: e.clientX,  y: e.clientY });`
 	- `...` object spread syntax so that you don’t need to copy every property separately, especially when you only update part of the object. e.g. `setPerson({  ...person, firstName: e.target.value});``
+	- for nested objects, use nested `...` to replace, e.g. `setPerson({...person,artwork{...person.artwork, title: e.target.value}})`
+- Array's State: although Array is mutable, treat it as read-only in react
+	- create a new array and pass it to the state setting function, using `filter()` , `map()`, `slice`, `concat`, `[...arr]`, not `push`, `pop`, `shift`, `reverse`, `sort`, `splice`; *if want to use all the function, copy the array first, then make changes to it, then setState, still avoid to use [0] = ' ', the copy just a pointer to the same existing array* 
+	- `...`, and add the new data, equals to `push`; add the new data, then `...` , equals to `push` + `unshift`
+	- `filter` to create a new array, and set the state, equals to remove the data
+	- `slice` to split a array, then put the data between, and set the state, equals to insert into an array
+	- `map` to create a new array, and set the state, equals to transform the data
+	- `map` to replace items in a array, and set the state, equals to `array[xx] = ''`
+ - Immer is a popular library that lets you write using the convenient but mutating syntax and takes care of producing the copies for you, can be used in deeply nested state
+	- `npm install use-immer`
+	- `import {useImmer} from "use-immer"
+	- `const [xxx, updateXxx] = useImmer()`
+	- `updateXxx(draft => {draft.xxx.xxx = e.target.value})`, change the exact parameter from the input
+	- mutation is ok for Immer, because you’re not mutating the original state, but you’re mutating a special `draft` object provided by Immer.
 
 
 

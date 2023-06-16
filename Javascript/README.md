@@ -2,7 +2,7 @@
 
 # Data Structure
 ## Array
-- `.map()`
+- `.map(currentValue, index,arr)`
 	- `.map(()=>)`: transform array to another array
 	- `.map(()=>{});`: transform array to other elments
 
